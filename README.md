@@ -69,7 +69,7 @@ CREATE TABLE donors (
 ```bash
 python app.py
 ```
-Then open your browser and go to http://127.0.0.1:5000
+Then open your browser and go to  http://localhost:5000
 
 ## 🔐 User Roles
 Currently, the system supports a single admin view without authentication. You can extend it with Flask-Login for:
