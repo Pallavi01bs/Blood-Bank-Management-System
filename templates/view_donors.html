@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Donors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: crimson;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: crimson;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: crimson;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .actions a {
+            margin: 0 5px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        .actions a.update {
+            background-color: darkgreen;
+        }
+        .actions a.delete {
+            background-color: red;
+        }
+        .actions a.update:hover {
+            background-color: greenyellow;
+        }
+        .actions a.delete:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donor List</h1>
+    <a href="/" class="back-link">Back to Home</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood Group</th>
+                <th>Contact Number</th>
+                <th>Address</th>
+                <th>Last Donation Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in donors %}
+            <tr>
+                <td>{{ donor[0] }}</td>
+                <td>{{ donor[1] }}</td>
+                <td>{{ donor[2] }}</td>
+                <td>{{ donor[3] }}</td>
+                <td>{{ donor[4] }}</td>
+                <td>{{ donor[5] }}</td>
+                <td>{{ donor[6] }}</td>
+                <td class="actions">
+                    <a href="/update/{{ donor[0] }}" class="update">Update</a>
+                    <a href="/delete/{{ donor[0] }}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

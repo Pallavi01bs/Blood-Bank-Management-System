@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blood Bank</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: black; /* To make text stand out */
+        }
+        .page-container {
+            border-top: 50px solid crimson;
+            border-bottom: 0px;
+            padding: 20px 0;  
+        }
+        h1 {
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 200px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: crimson;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1>Welcome to the Blood Bank Management System</h1>
+        <div class="button-container">
+            <a href="/add" class="button">Add Donor</a>
+            <a href="/view" class="button">View Donors</a>
+        </div>
+    </div>
+</body>
+</html>
