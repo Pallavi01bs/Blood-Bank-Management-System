@@ -87,4 +87,4 @@ Add UI screenshots like below:
 ![Update Donor](screenshots/update_donor.png)
 ```
 ## 📄 License
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE).
